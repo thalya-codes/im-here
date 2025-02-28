@@ -1,14 +1,17 @@
+import "react-native-reanimated";
 
-import * as SplashScreen from "expo-splash-screen";
-import { Text, View } from "react-native";
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+import HomeScreen from "./(tabs)/HomeScreen";
+import { StatusBar } from "react-native";
 
 export default function RootLayout() {
   return (
-    <View>
-      <Text>HELLO WORLD</Text>
-    </View>
+    <>
+      <StatusBar 
+        barStyle='light-content'
+        backgroundColor='transparent'
+        translucent
+      />
+      <HomeScreen />
+    </>
   );
 }
